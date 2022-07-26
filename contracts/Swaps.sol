@@ -22,21 +22,20 @@ contract Swaps is ERC721{
     }
 
     struct Asset{
-        int96 flowRateForAssets;
+        uint flowRateForAssets;
         uint amountUnderlyingExposed;
-        uint lockedCollateral;
         uint priceStable;
         address strategy;
     }
 
     mapping(uint => Asset) public AssetsByReceiverIndex;
 
-    function newSwap(address _receiver, address _payer, int96 _requiredFlowRate, uint _amountUnderlying) external{
+    function newSwap(address _receiver, address _payer, uint _requiredFlowRate, uint _amountUnderlying, uint _amountStable) external{
         // start a new flow from user to caller of required flow rate
         /// todo
 
         // log swap data
-        AssetsByReceiverIndex[index] = Asset(_requiredFlowRate, _amountUnderlying, 0, 0, msg.sender);
+        AssetsByReceiverIndex[index] = Asset(_requiredFlowRate, _amountUnderlying, _amountStable, msg.sender);
 
         // mint NFTs
         _mint(_receiver, index++);
@@ -49,7 +48,7 @@ contract Swaps is ERC721{
 
         // end the stream
         /// todo
-        
+
         // call settlement
         IReceiver(a.strategy).settle(a.amountUnderlyingExposed, a.priceStable, ownerOf(_receiverIndex+1));
 
