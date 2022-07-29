@@ -1,7 +1,7 @@
 module.exports = async ({getNamedAccounts, deployments}) => {
     const {deploy} = deployments;
-    const {account0, account1} = await getNamedAccounts();
-    await deploy('BoardwalkToken', {
+    const {account0} = await getNamedAccounts();
+    const BordToken = await deploy('BoardwalkToken', {
       from: account0,
       args: [],
       log: true,
@@ -27,5 +27,11 @@ module.exports = async ({getNamedAccounts, deployments}) => {
         log: true,
         contract: "TestToken"
     });
+
+    await deploy("Setup",{
+        from: account0,
+        args: [TestToken1.address, BordToken.address, TestToken3.address],
+        log: true,
+    })
 
 };

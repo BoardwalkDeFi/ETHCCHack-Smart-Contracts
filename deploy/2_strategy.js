@@ -4,7 +4,7 @@ require("dotenv").config();
 module.exports = async ({getNamedAccounts, deployments}) => {
 
     const {deploy, get} = deployments;
-    const {account0, account1} = await getNamedAccounts();
+    const {account0} = await getNamedAccounts();
 
     const stablecoin = await get("StableCoin");
     const streamCoin = await get("StreamCoin");

@@ -28,4 +28,13 @@ module.exports = {
       url: process.env.NETWORK_ENDPOINT_RINKEBY,
     },
   },
+  networks:{
+    rinkeby: {
+      url: process.env.NETWORK_ENDPOINT_RINKEBY,
+      accounts: [process.env.PRIVATE_KEY]
+    },
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY
+  },
 };

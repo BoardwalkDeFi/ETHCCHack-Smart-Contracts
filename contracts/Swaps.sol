@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: Unlicense
+//SPDX-License-Identifier: None
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -39,7 +39,7 @@ contract Swaps is ERC721{
 
         // mint NFTs
         _mint(_receiver, index++);
-        _mint(msg.sender, index++);
+        _mint(_payer, index++);
     }
 
 

@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: Unlicense
+//SPDX-License-Identifier: None
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -110,7 +110,7 @@ contract Strategy is ERC20{
         uint[] memory amounts = dex.swapExactTokensForTokens(
             amountCash,
             _getMinOut(amountCash, path),
-            path, 
+            path,
             address(this), 
             block.timestamp+30
         );
