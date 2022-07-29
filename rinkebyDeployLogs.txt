@@ -1,0 +1,7 @@
+deploying "BoardwalkToken" (tx: 0x198057c86cdc5c516333086d8f588a96f4fda4cd8cdd01575067dcef01e0fcdf)...: deployed at 0x3c1339DA839900A7fBa612A934560dE4d82fE405 with 1222494 gas
+reusing "StableCoin" at 0x42DCAA257a35e875D6D6B7401a85094cf40897Ea
+reusing "StreamCoin" at 0xE5d5613B7Dc241Eaf6E8F6ec518e8A9DC82D5131
+reusing "Asset" at 0x700FF7B56546eF9239650E2B97cC7276E33dDD16
+deploying "Setup" (tx: 0xa76b151668c2100ac611cc36edf97353e5d00b93ecf126470e66899556bee942)...: deployed at 0xAa618621c371aadF982a017C1c310dcc587fc998 with 810568 gas
+deploying "Swaps" (tx: 0xedd9c208a550cf44a8d94725c0d2a08bf3decb01e3ff0ee3b01467dc5d8c6923)...: deployed at 0xcd347d38e4f8D197c02773984b188f298acB32F2 with 2390367 gas
+deploying "Strategy" (tx: 0x3b6c36cfb3fd149aad612d1cd9cf5c6dd35ac1fbbcd3af03669b16a801ac67e4)...: deployed at 0xdA2F37Ac5DA4BAEAc574d0c64aA0E85b3675de1A with 3729636 gas
